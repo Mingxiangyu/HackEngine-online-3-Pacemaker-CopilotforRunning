@@ -4,12 +4,12 @@ openai.api_key = config.OPENAI_API_KEY
 
 messages = [{"role": "system", "content": 'You are a music recommender, please respond with a list of 5 songs based on my heart rate in bpm which is currently '}]
 
-def transcribe(heartrate):
+def transcribe(heartrate可加中文):
     global messages
 
-    transcript = heartrate
+    transcript = heartrate可加中文
 
-    messages.append({"role": "user", "content": heartrate})
+    messages.append({"role": "user", "content": heartrate可加中文})
 
     response = openai.ChatCompletion.create(model="gpt-4", messages=messages)
 
